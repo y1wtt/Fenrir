@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
-    <v-row justify="center">
-      <v-col cols="10" lg="8" xl="5">
+    <v-row justify="center" align="start">
+      <v-col cols="11" sm="10" md="9">
         <v-row align="center" justify="start">
           <number-input v-for="r in availableRoles" :key="r.name" :label="r.name" v-model="r.num" />
         </v-row>
@@ -10,16 +10,14 @@
           <v-col>
             <v-text-field label="合計" :value="sum" readonly disabled outlined />
           </v-col>
-        </v-row>
-        <v-row justify="center" align="center" class="ma-1" style="height:75px">
-          <v-col>
-            <v-btn depressed color="orange darken-1" dark @click="shuffle">割り当て</v-btn>
-          </v-col>
+          <v-btn class="pa-7 my-3" outlined color="primary" dark @click="shuffle">割り当て</v-btn>
         </v-row>
       </v-col>
     </v-row>
   </v-container>
 </template>
+<style scoped>
+</style>
 <script>
 import Player from "@/components/player";
 import NumberInput from "@/components/numberInput";
@@ -64,24 +62,20 @@ export default {
       let role = [];
       this.availableRoles.forEach(element => {
         for (let i = 0; i < element.num; i++) {
-          console.log(element);
           role.push(element.name);
         }
       });
 
-      console.log(role);
       for (let i = role.length; i > 0; i--) {
         // create ramdom value
         let min = Math.ceil(1);
         i = Math.floor(i);
         let r = Math.floor(Math.random() * (i - min)) + min;
-        console.log(role);
         // shuffle
         let tmp = role[r];
         role[r] = role[i - 1];
         role[i - 1] = tmp;
       }
-      console.log(role);
       this.role = role;
     }
   },

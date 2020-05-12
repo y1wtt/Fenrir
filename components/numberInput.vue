@@ -1,14 +1,15 @@
  <template>
-  <v-text-field
-    :label="label"
-    :value="num"
-    :v-bind="num"
-    hide-details="auto"
-    type="number"
-    style="width: 80px"
-    class="mx-2"
-    @input="updateNumber"
-  />
+  <v-col cols="6" md="2">
+    <v-text-field
+      :label="label"
+      :value="num"
+      :v-bind="num"
+      hide-details="auto"
+      type="number"
+      class="mx-2"
+      @input="updateNumber"
+    />
+  </v-col>
 </template>
 <script>
 export default {
@@ -26,8 +27,6 @@ export default {
   },
   methods: {
     updateNumber: function(e) {
-      console.log(Number(e));
-      console.log(Number(e) < 0);
       if (Number(e) < 0) {
         this.$emit("update-num", 0);
         return;
