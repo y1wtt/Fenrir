@@ -1,7 +1,7 @@
 {
-  "name": "人狼ゲーム",
+  "name": "Fenrir",
   "version": "1.0.0",
-  "description": "人狼ゲームツール群",
+  "description": "The Warewolf Game Tool",
   "author": "awataki",
   "private": true,
   "scripts": {

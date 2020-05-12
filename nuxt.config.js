@@ -10,7 +10,12 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: "人狼ゲームツール群" }
+      { hid: 'description', name: 'description', content: "人狼ゲームツール群" },
+      { hid: 'apple-mobile-web-app-title', name: 'apple-mobile-web-app-title', content: "人狼ゲームツール" },
+      { hid: 'og:title', name: 'og:title', property: 'og:title', content: "人狼ツール" },
+      { hid: 'og:site_name', name: 'og:site_name', property: '', content: "人狼ツール" },
+      { hid: 'author', name: 'author', content: "" },
+      { hid: 'og:description', name: 'og:description', content: "人狼ゲームツール群" },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/static/favicon.ico' }
