@@ -9,7 +9,7 @@ export default {
                 },
                 {
                     title: "タイマー",
-                    url: "timer"
+                    url: "/timer"
                 },
                 {
                     title: "投票",
