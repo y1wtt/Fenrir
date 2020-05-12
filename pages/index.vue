@@ -20,10 +20,6 @@
     </v-row>
   </v-container>
 </template>
-<style scoped>
-div.row {
-}
-</style>
 <script>
 import Player from "@/components/player";
 import NumberInput from "@/components/numberInput";
@@ -64,7 +60,30 @@ export default {
     };
   },
   methods: {
-    shuffle: function() {}
+    shuffle: function() {
+      let role = [];
+      this.availableRoles.forEach(element => {
+        for (let i = 0; i < element.num; i++) {
+          console.log(element);
+          role.push(element.name);
+        }
+      });
+
+      console.log(role);
+      for (let i = role.length; i > 0; i--) {
+        // create ramdom value
+        let min = Math.ceil(1);
+        i = Math.floor(i);
+        let r = Math.floor(Math.random() * (i - min)) + min;
+        console.log(role);
+        // shuffle
+        let tmp = role[r];
+        role[r] = role[i - 1];
+        role[i - 1] = tmp;
+      }
+      console.log(role);
+      this.role = role;
+    }
   },
   computed: {
     sum: function() {
