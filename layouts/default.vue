@@ -1,9 +1,9 @@
 <template>
   <v-app>
     <div>
-      <v-navigation-drawer app v-model="drawer" color="blue-grey lighten-5" bottom="true" clipped>
+      <v-navigation-drawer app v-model="drawer" color="blue-grey lighten-5" bottom clipped>
         <v-list>
-          <v-list-item v-for="i in items" :key="i.title" :to="i.url" link>
+          <v-list-item v-for="i in items" :key="i.title" :to="i.url">
             <v-list-item-title>{{i.title}}</v-list-item-title>
           </v-list-item>
         </v-list>
@@ -16,9 +16,7 @@
       </v-app-bar>
     </div>
     <v-content>
-      <v-container fluid>
-        <nuxt />
-      </v-container>
+      <nuxt />
     </v-content>
   </v-app>
 </template>

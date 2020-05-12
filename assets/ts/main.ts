@@ -5,7 +5,7 @@ export default {
             items: [
                 {
                     title: "割当ツール",
-                    url: "/position"
+                    url: "/"
                 },
                 {
                     title: "タイマー",
