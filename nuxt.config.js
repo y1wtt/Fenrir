@@ -14,8 +14,8 @@ export default {
       { hid: 'author', name: 'author', content: "" },
     ],
     link: [
-      { rel: 'shortcut icon', type: 'image/x-icon', href: '/static/favicon.ico' },
-      { rel: 'icon', type: 'image/x-icon', href: '/static/favicon.ico' }
+      { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
   // pwa options
