@@ -27,7 +27,7 @@ export default {
     description: '人狼ゲームツール群',
     'og:description': '人狼ゲームツール群',
     lang: 'ja',
-    display: "standalone",
+    display: "fullscreen",
     scope: "/",
     start_url: "/"
   },
