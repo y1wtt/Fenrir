@@ -19,16 +19,21 @@ export default {
     ]
   },
   // pwa options
-  manifest: {
-    name: "人狼ツール",
-    short_name: "人狼ツール",
-    title: "人狼ツール",
-    description: '人狼ゲームツール群',
-    background_color: '#CFD8DC',
-    lang: 'ja',
-    display: "fullscreen",
-    scope: "/",
-    start_url: "/"
+  pwa: {
+    manifest: {
+      name: "人狼ツール",
+      short_name: "人狼ツール",
+      title: "人狼ツール",
+      description: '人狼ゲームツール群',
+      background_color: '#CFD8DC',
+      lang: 'ja',
+      display: "fullscreen",
+      scope: "/",
+      start_url: "/"
+    },
+    icon: {
+      iconFileName: 'werewolf.png'
+    }
   },
   /*
   ** Customize the progress-bar color
