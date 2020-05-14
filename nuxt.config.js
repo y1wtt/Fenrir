@@ -30,9 +30,6 @@ export default {
       display: "fullscreen",
       scope: "/",
       start_url: "/"
-    },
-    icon: {
-      iconFileName: 'werewolf.png'
     }
   },
   /*
