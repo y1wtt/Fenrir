@@ -6,11 +6,13 @@
           <number-input v-for="r in availableRoles" :key="r.name" :label="r.name" v-model="r.num" />
         </v-row>
         <player v-for="i in sum" :key="i" :position="role[i-1]" />
-        <v-row>
-          <v-col>
+        <v-row justify="end">
+          <v-col cols="8">
             <v-text-field label="合計" :value="sum" readonly disabled outlined />
           </v-col>
-          <v-btn class="pa-7 my-3" outlined color="primary" dark @click="shuffle">割り当て</v-btn>
+          <v-col cols="4">
+            <v-btn outlined style="height:56px" color="primary" dark @click="shuffle">割り当て</v-btn>
+          </v-col>
         </v-row>
       </v-col>
     </v-row>
