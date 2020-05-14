@@ -76,7 +76,7 @@ export default {
 
       for (let i = role.length; i > 0; i--) {
         // create ramdom value
-        let min = Math.ceil(1);
+        let min = Math.ceil(0);
         i = Math.floor(i);
         let r = Math.floor(Math.random() * (i - min)) + min;
         // shuffle
