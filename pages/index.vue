@@ -11,7 +11,13 @@
             <v-text-field label="合計" :value="sum" readonly disabled outlined />
           </v-col>
           <v-col cols="4">
-            <v-btn outlined style="height:56px" color="primary" dark @click="shuffle">割り当て</v-btn>
+            <v-btn
+              outlined
+              style="height:56px;width:100%;font-size:1rem"
+              color="primary"
+              dark
+              @click="shuffle"
+            >割り当て</v-btn>
           </v-col>
         </v-row>
       </v-col>
