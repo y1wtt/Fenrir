@@ -104,7 +104,7 @@ export default {
       })
 
       for (let i = role.length; i > 0; i--) {
-        // create ramdom value
+        // create random value
         const min = Math.ceil(0)
         i = Math.floor(i)
         const r = Math.floor(Math.random() * (i - min)) + min
