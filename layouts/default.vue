@@ -14,7 +14,9 @@
         <span @click="$router.push('/'); drawer = false">人狼ゲームツール集</span>
       </v-toolbar-title>
       <v-spacer />
-      {{ timeSurface }}
+      <h2 v-if="time !== 0">
+        {{ timeSurface }}
+      </h2>
     </v-app-bar>
     <v-main>
       <nuxt />

@@ -1,5 +1,5 @@
 <template>
-  <v-col cols="6" md="2">
+  <v-col cols="6" md="4" xl="2">
     <v-text-field
       prepend-icon="mdi-minus"
       append-outer-icon="mdi-plus"

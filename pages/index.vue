@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-row justify="center" align="start">
-      <v-col cols="11" sm="10" md="9">
+      <v-col cols="11" md="10" xl="8">
         <v-row align="center" justify="start">
           <number-input v-for="r in availableRoles" :key="r.name" v-model="r.num" :label="r.name" />
         </v-row>

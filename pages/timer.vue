@@ -63,6 +63,6 @@ export default Vue.extend({
 <style scoped>
 .clock{
   text-align: center;
-  font-size: 18vh;
+  font-size: 15.5vh;
 }
 </style>
