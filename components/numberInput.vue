@@ -1,38 +1,46 @@
- <template>
+<template>
   <v-col cols="6" md="2">
     <v-text-field
+      prepend-icon="mdi-minus"
+      append-outer-icon="mdi-plus"
       :label="label"
       :value="num"
       :v-bind="num"
       hide-details="auto"
-      type="number"
       class="mx-2"
       @input="updateNumber"
+      @keyup.up="updateNumber(num+1)"
+      @click:append-outer="updateNumber(num+1)"
+      @keyup.down="updateNumber(num-1)"
+      @click:prepend="updateNumber(num-1)"
     />
   </v-col>
 </template>
 <script>
 export default {
-  name: "number-input",
+  name: 'NumberInput',
   model: {
-    prop: "num",
-    event: "update-num"
+    prop: 'num',
+    event: 'update-num'
   },
   props: {
     num: {
       type: Number,
       default: 0
     },
-    label: {}
+    label: {
+      type: String,
+      default: ''
+    }
   },
   methods: {
-    updateNumber: function(e) {
+    updateNumber (e) {
       if (Number(e) < 0) {
-        this.$emit("update-num", 0);
-        return;
+        this.$emit('update-num', 0)
+        return
       }
-      this.$emit("update-num", Number(e));
+      this.$emit('update-num', Number(e))
     }
   }
-};
+}
 </script>
