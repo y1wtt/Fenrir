@@ -5,7 +5,9 @@
         <v-row align="center" justify="start">
           <number-input v-for="r in availableRoles" :key="r.name" v-model="r.num" :label="r.name" />
         </v-row>
-        <player v-for="i in players" :key="i.id" v-model="i.name" :role="i.role" />
+        <v-form ref="form">
+          <player v-for="i in players" :key="i.id" v-model="i.name" :role="i.role" />
+        </v-form>
         <v-row justify="end">
           <v-col cols="8">
             <v-text-field label="合計" :value="sum" readonly disabled outlined />
@@ -92,6 +94,8 @@ export default {
   },
   methods: {
     shuffle () {
+      const valid = this.$refs.form.validate()
+      if (!valid) { return }
       const role = []
       this.availableRoles.forEach((element) => {
         for (let i = 0; i < element.num; i++) {

@@ -1,21 +1,19 @@
 <template>
   <v-row align="center" justify="center">
-    <v-col cols="8">
+    <v-col cols="8" class="pb-0 pt-4">
       <v-text-field
         label="ユーザー名"
-        hide-details
-        outlined
         :value="name"
         :v-bind="name"
         :rules="rules.required"
+        outlined
         @input="updatePlayerName"
       />
     </v-col>
-    <v-col cols="4">
+    <v-col cols="4" class="pb-0 pt-4">
       <v-text-field
         label="役職"
         :value="role"
-        hide-details="auto"
         readonly
         outlined
         disabled
